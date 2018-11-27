@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using CyberWarfare_MVC.Models;
+using CyberWarfare.Data;
 
 namespace CyberWarfare_MVC
 {

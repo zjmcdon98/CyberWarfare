@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using CyberWarfare_MVC.Models;
+using CyberWarfare.Data;
 
 namespace CyberWarfare_MVC
 {

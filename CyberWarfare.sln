@@ -5,6 +5,16 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberWarfare_MVC", "CyberWarfare_MVC\CyberWarfare_MVC.csproj", "{24AF0BC8-6987-429D-988C-4102305E8F1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberWarfare.Data", "CyberWarfare.Data\CyberWarfare.Data.csproj", "{5007C3B1-7CD8-4AD3-8355-74BFF2DA28D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassWarfare.Models", "ClassWarfare.Models\ClassWarfare.Models.csproj", "{2F9123E7-FF83-4DAE-8B84-D0048A34F302}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberWarfare.Contracts", "CyberWarfare.Contracts\CyberWarfare.Contracts.csproj", "{177C6B08-03A6-4F5F-957F-91DCBE96AAD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberWarfare.Services", "CyberWarfare.Services\CyberWarfare.Services.csproj", "{6EC380A7-CAC2-4F4A-AA7F-55DB74B3C5B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberWarfare.Tests", "CyberWarfare.Tests\CyberWarfare.Tests.csproj", "{ED86E424-109E-4CBC-AB24-0A57310A1A68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,26 @@ Global
 		{24AF0BC8-6987-429D-988C-4102305E8F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24AF0BC8-6987-429D-988C-4102305E8F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24AF0BC8-6987-429D-988C-4102305E8F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5007C3B1-7CD8-4AD3-8355-74BFF2DA28D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5007C3B1-7CD8-4AD3-8355-74BFF2DA28D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5007C3B1-7CD8-4AD3-8355-74BFF2DA28D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5007C3B1-7CD8-4AD3-8355-74BFF2DA28D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F9123E7-FF83-4DAE-8B84-D0048A34F302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F9123E7-FF83-4DAE-8B84-D0048A34F302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F9123E7-FF83-4DAE-8B84-D0048A34F302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F9123E7-FF83-4DAE-8B84-D0048A34F302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{177C6B08-03A6-4F5F-957F-91DCBE96AAD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{177C6B08-03A6-4F5F-957F-91DCBE96AAD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{177C6B08-03A6-4F5F-957F-91DCBE96AAD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{177C6B08-03A6-4F5F-957F-91DCBE96AAD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EC380A7-CAC2-4F4A-AA7F-55DB74B3C5B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EC380A7-CAC2-4F4A-AA7F-55DB74B3C5B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EC380A7-CAC2-4F4A-AA7F-55DB74B3C5B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EC380A7-CAC2-4F4A-AA7F-55DB74B3C5B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED86E424-109E-4CBC-AB24-0A57310A1A68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED86E424-109E-4CBC-AB24-0A57310A1A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED86E424-109E-4CBC-AB24-0A57310A1A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED86E424-109E-4CBC-AB24-0A57310A1A68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
