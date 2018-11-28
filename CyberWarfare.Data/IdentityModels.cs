@@ -32,7 +32,7 @@ namespace CyberWarfare.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<CyberWar> CyberWars { get; set; }
+        public DbSet<CyberAttack> Attacks { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

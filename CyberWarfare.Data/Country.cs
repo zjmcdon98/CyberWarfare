@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CyberWarfare.Services
+namespace CyberWarfare.Data
 {
-    public class Class1
+    class Country
     {
     }
 }
