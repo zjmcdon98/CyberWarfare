@@ -13,6 +13,9 @@ namespace CyberWarfare.Data
         public int AttackId { get; set; }
 
         [Required]
+        public string Name { get; set; }
+
+        [Required]
         public string Success { get; set; }
 
         [Required]
@@ -23,6 +26,8 @@ namespace CyberWarfare.Data
 
         [Required]
         public string AttackType { get; set; }
+
+
     }
 }
 
