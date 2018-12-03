@@ -10,11 +10,17 @@ namespace CyberWarfare_MVC.Controllers
     [Authorize]
     public class AttackController : Controller
     {
-        // GET: Attack
+        // GET
         public ActionResult Index()
         {
             var model = new AttackListItem[0];
             return View(model);
+        }
+
+        //Get
+        public ActionResult Create()
+        {
+            return View();
         }
     }
 }

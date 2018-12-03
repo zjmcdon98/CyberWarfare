@@ -5,29 +5,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CyberWarfare.Data
+namespace ClassWarfare.Models
 {
-    public class CyberAttack
+    public class AttackCreate
     {
-        [Key]
-        public int AttackId { get; set; }
-
         [Required]
+        [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
+        [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
         public string AttackName { get; set; }
 
-        [Required]
         public string Success { get; set; }
 
-        [Required]
         public string Time { get; set; }
 
-        [Required]
         public string Date { get; set; }
 
-        [Required]
         public string AttackType { get; set; }
 
-
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
-
