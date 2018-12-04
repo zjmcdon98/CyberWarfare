@@ -1,8 +1,11 @@
 ﻿using ClassWarfare.Models;
+using CyberWarfare.Services;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.ApplicationServices;
 using System.Web.Mvc;
 
 namespace CyberWarfare_MVC.Controllers
@@ -13,7 +16,9 @@ namespace CyberWarfare_MVC.Controllers
         // GET
         public ActionResult Index()
         {
-            var model = new AttackListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new AttackService(userId);
+            var model = service.GetAttacks();
             return View(model);
         }
 
@@ -27,11 +32,17 @@ namespace CyberWarfare_MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(AttackCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-
+                return View(model);
             }
-            return View(model);
+
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new AttackService(userId);
+
+            service.CreateAttack(model);
+
+            return RedirectToAction("Index");
         }
     }
 }

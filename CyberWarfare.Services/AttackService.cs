@@ -22,7 +22,7 @@ namespace CyberWarfare.Services
             var entity =
                 new Attack()
                 {
-                    AttackId = _userId,
+                    OwnerId = _userId,
                     AttackName = model.AttackName
                 };
 
@@ -40,12 +40,12 @@ namespace CyberWarfare.Services
                 var query =
                     ctx
                         .Attacks
-                        .Where(e => e.AttackId == _userId)
+                        .Where(e => e.OwnerId == _userId)
                         .Select(
                         e =>
                             new AttackListItem
                             {
-                                AttackId = e.NoteId,
+                                AttackId = e.AttackId,
                                 AttackName = e.AttackName
                             }
                         );

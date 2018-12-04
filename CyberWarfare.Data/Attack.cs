@@ -10,7 +10,10 @@ namespace CyberWarfare.Data
     public class Attack
     {
         [Key]
-        public Guid AttackId { get; set; }
+        public int AttackId { get; set; }
+
+        [Required]
+        public Guid OwnerId { get; set; }
 
         [Required]
         public string AttackName { get; set; }
