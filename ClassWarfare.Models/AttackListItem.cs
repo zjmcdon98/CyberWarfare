@@ -11,9 +11,6 @@ namespace ClassWarfare.Models
         public int AttackId { get; set; }
         public string AttackName { get; set; }
 
-        public override string ToString()
-        {
-            return base.ToString();
-        }
+        public override string ToString() => AttackName;
     }
 }

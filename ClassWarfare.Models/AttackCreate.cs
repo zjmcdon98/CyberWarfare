@@ -22,9 +22,6 @@ namespace ClassWarfare.Models
 
         public string AttackType { get; set; }
 
-        public override string ToString()
-        {
-            return base.ToString();
-        }
+        public override string ToString() => AttackName;
     }
 }
