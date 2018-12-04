@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace CyberWarfare.Data
 {
-    public class CyberAttack
+    public class Attack
     {
         [Key]
-        public int AttackId { get; set; }
+        public Guid AttackId { get; set; }
 
         [Required]
         public string AttackName { get; set; }

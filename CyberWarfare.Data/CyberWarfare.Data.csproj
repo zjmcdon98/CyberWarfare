@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Country.cs" />
-    <Compile Include="CyberAttack.cs" />
+    <Compile Include="Attack.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\201811281910078_InitialCreate.cs" />
     <Compile Include="Migrations\201811281910078_InitialCreate.Designer.cs">
@@ -64,6 +64,10 @@
     <Compile Include="Migrations\201812031932096_Edit.cs" />
     <Compile Include="Migrations\201812031932096_Edit.Designer.cs">
       <DependentUpon>201812031932096_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812041852071_Edit1.cs" />
+    <Compile Include="Migrations\201812041852071_Edit1.Designer.cs">
+      <DependentUpon>201812041852071_Edit1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812031932096_Edit.resx">
       <DependentUpon>201812031932096_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812041852071_Edit1.resx">
+      <DependentUpon>201812041852071_Edit1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
