@@ -85,6 +85,10 @@
     <Compile Include="Migrations\201812062134211_Edit7.Designer.cs">
       <DependentUpon>201812062134211_Edit7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812062149510_Edit8.cs" />
+    <Compile Include="Migrations\201812062149510_Edit8.Designer.cs">
+      <DependentUpon>201812062149510_Edit8.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -113,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812062134211_Edit7.resx">
       <DependentUpon>201812062134211_Edit7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812062149510_Edit8.resx">
+      <DependentUpon>201812062149510_Edit8.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
