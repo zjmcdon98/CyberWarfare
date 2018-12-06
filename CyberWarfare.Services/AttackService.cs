@@ -23,7 +23,11 @@ namespace CyberWarfare.Services
                 new Attack()
                 {
                     OwnerId = _userId,
-                    AttackName = model.AttackName
+                    AttackName = model.AttackName,
+                    Success = model.Success,
+                    Time = model.Time,
+                    Date = model.Date,
+                    AttackType = model.AttackType
                 };
 
             using (var ctx = new ApplicationDbContext())

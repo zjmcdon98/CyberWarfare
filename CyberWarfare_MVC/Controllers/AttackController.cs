@@ -32,17 +32,28 @@ namespace CyberWarfare_MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(AttackCreate model)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
+            if (!ModelState.IsValid) return View(model);
 
+            var service = CreateAttackService();
+
+            if (service.CreateAttack(model))
+            {
+                TempData["SaveResult"] = "Your note was created.";
+                return RedirectToAction("Index");
+            };
+
+            ModelState.AddModelError("", "Note could not be created.");
+
+            return View(model);
+        }
+
+        private AttackService CreateAttackService()
+        {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new AttackService(userId);
-
-            service.CreateAttack(model);
-
-            return RedirectToAction("Index");
+            return service;
         }
     }
 }
+
+
