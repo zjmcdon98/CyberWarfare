@@ -56,6 +56,27 @@ namespace CyberWarfare.Services
                 return query.ToArray();
             }
         }
+
+        public AttackDetail GetAttackById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                  ctx
+                      .Attacks
+                      .Single(e => e.AttackId == attackId && e.OwnerId == _userId);
+                return
+                  new AttackDetail
+                  {
+                      AttackId = entity.AttackId,
+                      AttackName = entity.AttackName,
+                      Success = entity.Success,
+                      Date = entity.Date,
+                      Time = entity.Time,
+                      AttackType = entity.AttackType
+                  };
+            }
+        }
     }
 }
        

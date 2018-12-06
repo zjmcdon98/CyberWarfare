@@ -47,6 +47,14 @@ namespace CyberWarfare_MVC.Controllers
             return View(model);
         }
 
+        public ActionResult Details(int id)
+        {
+            var svc = CreateAttackService();
+            var model = svc.GetAttackById(id);
+
+            return View(model);
+        }
+
         private AttackService CreateAttackService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

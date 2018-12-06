@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttackCreate.cs" />
+    <Compile Include="AttackDetail.cs" />
     <Compile Include="AttackListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
