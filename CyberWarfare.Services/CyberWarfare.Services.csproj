@@ -62,9 +62,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassWarfare.Models\ClassWarfare.Models.csproj">
+    <ProjectReference Include="..\ClassWarfare.Models\CyberWarfare.Models.csproj">
       <Project>{2f9123e7-ff83-4dae-8b84-d0048a34f302}</Project>
-      <Name>ClassWarfare.Models</Name>
+      <Name>CyberWarfare.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\CyberWarfare.Data\CyberWarfare.Data.csproj">
       <Project>{5007c3b1-7cd8-4ad3-8355-74bff2da28d3}</Project>

@@ -58,6 +58,24 @@ namespace CyberWarfare.Services
             }
         }
 
+        public bool UpdateAttack(AttackEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                     ctx
+                        .Attacks
+                        .Single(e => e.AttackId == model.AttackId && e.OwnerId == _userId);
+                entity.AttackName = model.AttackName;
+                entity.Success = model.Success;
+                entity.Date = model.Date;
+                entity.Time = model.Time;
+                entity.AttackType = model.AttackType;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
         public IEnumerable<AttackListItem> GetAttacks()
         {
             using (var ctx = new ApplicationDbContext())

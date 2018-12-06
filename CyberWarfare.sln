@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberWarfare_MVC", "CyberWa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberWarfare.Data", "CyberWarfare.Data\CyberWarfare.Data.csproj", "{5007C3B1-7CD8-4AD3-8355-74BFF2DA28D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassWarfare.Models", "ClassWarfare.Models\ClassWarfare.Models.csproj", "{2F9123E7-FF83-4DAE-8B84-D0048A34F302}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberWarfare.Models", "ClassWarfare.Models\CyberWarfare.Models.csproj", "{2F9123E7-FF83-4DAE-8B84-D0048A34F302}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberWarfare.Contracts", "CyberWarfare.Contracts\CyberWarfare.Contracts.csproj", "{177C6B08-03A6-4F5F-957F-91DCBE96AAD3}"
 EndProject

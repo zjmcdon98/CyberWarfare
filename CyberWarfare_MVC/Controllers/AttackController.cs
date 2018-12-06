@@ -55,6 +55,22 @@ namespace CyberWarfare_MVC.Controllers
             return View(model);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var service = CreateAttackService();
+            var detail = service.GetAttackById(id);
+            var model =
+                new AttackEdit
+                {
+                    AttackId = detail.AttackId,
+                    Success = detail.Success,
+                    Date = detail.Date,
+                    Time = detail.Time,
+                    AttackType = detail.AttackType
+                };
+            return View(model);
+        }
+
         private AttackService CreateAttackService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
