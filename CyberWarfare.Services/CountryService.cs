@@ -1,5 +1,6 @@
 ﻿using ClassWarfare.Models;
 using CyberWarfare.Data;
+using CyberWarfare.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace CyberWarfare.Services
     public class CountryService
     {
         private readonly Guid _userId;
+
 
         public CountryService(Guid userId)
         {
@@ -55,14 +57,14 @@ namespace CyberWarfare.Services
             }
         }
 
-        public CountryDetail GetCountryById(int id)
+        public CountryDetail GetCountryById(int countryid)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Countries
-                        .Single(e => e.CountryId == countryId && e.OwnerTwoId == _userId);
+                        .Single(e => e.CountryId == countryid && e.OwnerTwoId == _userId);
                 return
                     new CountryDetail
                     {
@@ -71,8 +73,9 @@ namespace CyberWarfare.Services
                         CountryTech = entity.CountryTech,
                         DipRelations = entity.DipRelations,
                         StaffAmount = entity.StaffAmount,
-                        CountryBudget = CountryBudget
-                    };​
+                        CountryBudget = entity.CountryBudget
+                    };
             }
         }
     }
+}

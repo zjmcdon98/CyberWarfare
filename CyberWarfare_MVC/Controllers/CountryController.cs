@@ -50,7 +50,7 @@ namespace CyberWarfare_MVC.Controllers
         {
             var svc = CreateCountryService();
             var model = svc.GetCountryById(id);
-​
+
             return View(model);
         }
 
