@@ -1,4 +1,6 @@
 ﻿using ClassWarfare.Models;
+using CyberWarfare.Services;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,10 @@ namespace CyberWarfare_MVC.Controllers
         // GET
         public ActionResult Index()
         {
-            var model = new CountryListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CountryService(userId);
+            var model = service.GetCountries();
+
             return View(model);
         }
 
@@ -27,11 +32,17 @@ namespace CyberWarfare_MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(CountryCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-
+                return View(model);
             }
-            return View(model);
+
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CountryService(userId);
+
+            service.CreateCountry(model);
+
+            return RedirectToAction("Index");
         }
     }
 }
