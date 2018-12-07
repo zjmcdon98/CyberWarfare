@@ -22,5 +22,16 @@ namespace CyberWarfare_MVC.Controllers
         {
             return View();
         }
+
+        //Post
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(CountryCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
+        }
     }
 }

@@ -29,8 +29,6 @@ namespace CyberWarfare.Data
 
         [Required]
         public string AttackType { get; set; }
-
-
     }
 }
 

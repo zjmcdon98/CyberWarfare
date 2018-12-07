@@ -28,7 +28,7 @@ namespace CyberWarfare_MVC.Controllers
             return View();
         }
 
-        [HttpPost]
+        //Post
         [ValidateAntiForgeryToken]
         public ActionResult Create(AttackCreate model)
         {
@@ -47,6 +47,7 @@ namespace CyberWarfare_MVC.Controllers
             return View(model);
         }
 
+        //Get
         public ActionResult Details(int id)
         {
             var svc = CreateAttackService();
@@ -55,6 +56,7 @@ namespace CyberWarfare_MVC.Controllers
             return View(model);
         }
 
+        //Get
         public ActionResult Edit(int id)
         {
             var service = CreateAttackService();
@@ -71,7 +73,7 @@ namespace CyberWarfare_MVC.Controllers
             return View(model);
         }
 
-        [HttpPost]
+        //Post
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, AttackEdit model)
         {
@@ -95,6 +97,7 @@ namespace CyberWarfare_MVC.Controllers
             return View(model);
         }
 
+        //Get
         public ActionResult Delete(int id)
         {
             var svc = CreateAttackService();
@@ -103,7 +106,7 @@ namespace CyberWarfare_MVC.Controllers
             return View(model);
         }
 
-        [HttpPost]
+        //Post
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeletePost(int id)
@@ -117,6 +120,7 @@ namespace CyberWarfare_MVC.Controllers
             return RedirectToAction("Index");
         }
 
+        //Get
         public AttackService CreateAttackService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
