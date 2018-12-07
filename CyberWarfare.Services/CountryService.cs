@@ -77,5 +77,25 @@ namespace CyberWarfare.Services
                     };
             }
         }
+
+        public bool UpdateCountry(CountryEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Countries
+                        .Single(e => e.CountryId == model.CountryId && e.OwnerTwoId == _userId);
+
+                entity.CountryName = entity.CountryName;
+                entity.CountryTech = entity.CountryTech;
+                entity.DipRelations = entity.DipRelations;
+                entity.StaffAmount = entity.StaffAmount;
+                entity.CountryBudget = entity.CountryBudget;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
     }
 }

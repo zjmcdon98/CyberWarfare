@@ -1,4 +1,5 @@
 ﻿using ClassWarfare.Models;
+using CyberWarfare.Models;
 using CyberWarfare.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -51,6 +52,23 @@ namespace CyberWarfare_MVC.Controllers
             var svc = CreateCountryService();
             var model = svc.GetCountryById(id);
 
+            return View(model);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var service = CreateCountryService();
+            var detail = service.GetCountryById(id);
+            var model =
+                new CountryEdit
+                {
+                    CountryId = detail.CountryId,
+                    CountryName = detail.CountryName,
+                    CountryTech = detail.CountryTech,
+                    DipRelations = detail.DipRelations,
+                    StaffAmount = detail.StaffAmount,
+                    CountryBudget = detail.CountryBudget
+                };
             return View(model);
         }
 

@@ -60,6 +60,7 @@
     <Compile Include="AttackListItem.cs" />
     <Compile Include="CountryCreate.cs" />
     <Compile Include="CountryDetail.cs" />
+    <Compile Include="CountryEdit.cs" />
     <Compile Include="CountryListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
