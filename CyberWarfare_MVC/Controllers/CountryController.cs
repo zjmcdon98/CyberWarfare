@@ -55,6 +55,7 @@ namespace CyberWarfare_MVC.Controllers
             return View(model);
         }
 
+        //Get
         public ActionResult Edit(int id)
         {
             var service = CreateCountryService();
@@ -69,6 +70,31 @@ namespace CyberWarfare_MVC.Controllers
                     StaffAmount = detail.StaffAmount,
                     CountryBudget = detail.CountryBudget
                 };
+            return View(model);
+        }
+
+        //Post
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, CountryEdit model)
+        {
+           if(!ModelState.IsValid) return View(model);
+
+           if(model.CountryId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch.");
+                return View(model);
+            }
+
+            var service = CreateCountryService();
+
+            if (service.UpdateCountry(model))
+            {
+                TempData["SaveResult"] = "The Country was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "The Country could not be updated.");
             return View(model);
         }
 

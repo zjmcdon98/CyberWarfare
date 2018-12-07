@@ -87,11 +87,11 @@ namespace CyberWarfare.Services
                         .Countries
                         .Single(e => e.CountryId == model.CountryId && e.OwnerTwoId == _userId);
 
-                entity.CountryName = entity.CountryName;
-                entity.CountryTech = entity.CountryTech;
-                entity.DipRelations = entity.DipRelations;
-                entity.StaffAmount = entity.StaffAmount;
-                entity.CountryBudget = entity.CountryBudget;
+                entity.CountryName = model.CountryName;
+                entity.CountryTech = model.CountryTech;
+                entity.DipRelations = model.DipRelations;
+                entity.StaffAmount = model.StaffAmount;
+                entity.CountryBudget = model.CountryBudget;
 
                 return ctx.SaveChanges() == 1;
             }
