@@ -76,6 +76,21 @@ namespace CyberWarfare.Services
             }
         }
 
+        public bool DeleteAttack(int attackId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Attacks
+                        .Single(e => e.AttackId == attackId && e.OwnerId == _userId);
+
+                ctx.Attacks.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
         public IEnumerable<AttackListItem> GetAttacks()
         {
             using (var ctx = new ApplicationDbContext())

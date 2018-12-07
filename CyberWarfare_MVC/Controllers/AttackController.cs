@@ -95,7 +95,29 @@ namespace CyberWarfare_MVC.Controllers
             return View(model);
         }
 
-        private AttackService CreateAttackService()
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateAttackService();
+            var model = svc.GetAttackById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateAttackService();
+
+            service.DeleteAttack(id);
+
+            TempData["SaveResult"] = "Your note was deleted.";
+
+            return RedirectToAction("Index");
+        }
+
+        public AttackService CreateAttackService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new AttackService(userId);
