@@ -13,6 +13,12 @@ namespace CyberWarfare.Data
         public int CountryId { get; set; }
 
         [Required]
+        public Guid OwnerTwoId { get; set; }
+
+        [Required]
+        public string CountryName { get; set; }
+
+        [Required]
         public string CountryTech { get; set; }
 
         [Required]
