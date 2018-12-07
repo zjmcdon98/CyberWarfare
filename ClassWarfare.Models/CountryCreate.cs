@@ -18,9 +18,9 @@ namespace ClassWarfare.Models
 
         public string DipRelations { get; set; }
 
-        public string StaffAmount { get; set; }
+        public int StaffAmount { get; set; }
 
-        public string CountryBudget { get; set; }
+        public int CountryBudget { get; set; }
 
         public override string ToString() => CountryName;
     }
