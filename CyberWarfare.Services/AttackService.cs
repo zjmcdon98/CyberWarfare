@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CyberWarfare.Services
+namespace ClassWarfare.Services
 {
     public class AttackService
     {

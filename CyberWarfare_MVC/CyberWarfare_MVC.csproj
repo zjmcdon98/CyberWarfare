@@ -291,13 +291,13 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassWarfare.Models\CyberWarfare.Models.csproj">
-      <Project>{2f9123e7-ff83-4dae-8b84-d0048a34f302}</Project>
-      <Name>CyberWarfare.Models</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CyberWarfare.Data\CyberWarfare.Data.csproj">
       <Project>{5007c3b1-7cd8-4ad3-8355-74bff2da28d3}</Project>
       <Name>CyberWarfare.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CyberWarfare.Models\ClassWarfare.Models.csproj">
+      <Project>{C2098113-D5DC-4EAD-A03C-32974F06C088}</Project>
+      <Name>ClassWarfare.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\CyberWarfare.Services\CyberWarfare.Services.csproj">
       <Project>{6ec380a7-cac2-4f4a-aa7f-55db74b3c5b3}</Project>

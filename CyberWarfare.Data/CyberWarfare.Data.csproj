@@ -129,6 +129,34 @@
     <Compile Include="Migrations\201812071618204_Edit18.Designer.cs">
       <DependentUpon>201812071618204_Edit18.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812071640405_Edit19.cs" />
+    <Compile Include="Migrations\201812071640405_Edit19.Designer.cs">
+      <DependentUpon>201812071640405_Edit19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812071643305_Edit20.cs" />
+    <Compile Include="Migrations\201812071643305_Edit20.Designer.cs">
+      <DependentUpon>201812071643305_Edit20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812071649143_Edit21.cs" />
+    <Compile Include="Migrations\201812071649143_Edit21.Designer.cs">
+      <DependentUpon>201812071649143_Edit21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812071700186_Edit22.cs" />
+    <Compile Include="Migrations\201812071700186_Edit22.Designer.cs">
+      <DependentUpon>201812071700186_Edit22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812071717001_Edit23.cs" />
+    <Compile Include="Migrations\201812071717001_Edit23.Designer.cs">
+      <DependentUpon>201812071717001_Edit23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812071719178_Edit24.cs" />
+    <Compile Include="Migrations\201812071719178_Edit24.Designer.cs">
+      <DependentUpon>201812071719178_Edit24.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812071744194_Edit25.cs" />
+    <Compile Include="Migrations\201812071744194_Edit25.Designer.cs">
+      <DependentUpon>201812071744194_Edit25.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -190,6 +218,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812071618204_Edit18.resx">
       <DependentUpon>201812071618204_Edit18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812071640405_Edit19.resx">
+      <DependentUpon>201812071640405_Edit19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812071643305_Edit20.resx">
+      <DependentUpon>201812071643305_Edit20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812071649143_Edit21.resx">
+      <DependentUpon>201812071649143_Edit21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812071700186_Edit22.resx">
+      <DependentUpon>201812071700186_Edit22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812071717001_Edit23.resx">
+      <DependentUpon>201812071717001_Edit23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812071719178_Edit24.resx">
+      <DependentUpon>201812071719178_Edit24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812071744194_Edit25.resx">
+      <DependentUpon>201812071744194_Edit25.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

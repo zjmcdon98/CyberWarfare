@@ -2,9 +2,6 @@
 using CyberWarfare.Services;
 using Microsoft.AspNet.Identity;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace CyberWarfare_MVC.Controllers
@@ -29,20 +26,31 @@ namespace CyberWarfare_MVC.Controllers
         }
 
         //Post
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(CountryCreate model)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
+            if (!ModelState.IsValid) return View(model);
 
+            var service = CreateCountryService();
+
+            if (service.CreateCountry(model))
+            {
+                TempData["SaveResult"] = "Your note was created.";
+                return RedirectToAction("Index");
+            };
+
+            ModelState.AddModelError("", "Note could not be created.");
+
+            return View(model);
+        }
+
+        //Get
+        private CountryService CreateCountryService()
+        {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new CountryService(userId);
-
-            service.CreateCountry(model);
-
-            return RedirectToAction("Index");
+            return service;
         }
     }
 }

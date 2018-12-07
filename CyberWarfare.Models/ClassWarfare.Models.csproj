@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6EC380A7-CAC2-4F4A-AA7F-55DB74B3C5B3}</ProjectGuid>
+    <ProjectGuid>{C2098113-D5DC-4EAD-A03C-32974F06C088}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CyberWarfare.Services</RootNamespace>
-    <AssemblyName>CyberWarfare.Services</AssemblyName>
+    <RootNamespace>CyberWarfare.Models</RootNamespace>
+    <AssemblyName>CyberWarfare.Models</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -54,23 +54,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AttackService.cs" />
-    <Compile Include="CountryService.cs" />
+    <Compile Include="AttackCreate.cs" />
+    <Compile Include="AttackDetail.cs" />
+    <Compile Include="AttackEdit.cs" />
+    <Compile Include="AttackListItem.cs" />
+    <Compile Include="CountryCreate.cs" />
+    <Compile Include="CountryListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CyberWarfare.Data\CyberWarfare.Data.csproj">
-      <Project>{5007c3b1-7cd8-4ad3-8355-74bff2da28d3}</Project>
-      <Name>CyberWarfare.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CyberWarfare.Models\ClassWarfare.Models.csproj">
-      <Project>{C2098113-D5DC-4EAD-A03C-32974F06C088}</Project>
-      <Name>ClassWarfare.Models</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

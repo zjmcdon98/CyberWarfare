@@ -1,4 +1,5 @@
 ﻿using ClassWarfare.Models;
+using ClassWarfare.Services;
 using CyberWarfare.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -29,6 +30,7 @@ namespace CyberWarfare_MVC.Controllers
         }
 
         //Post
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(AttackCreate model)
         {
@@ -74,6 +76,7 @@ namespace CyberWarfare_MVC.Controllers
         }
 
         //Post
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, AttackEdit model)
         {
@@ -107,6 +110,7 @@ namespace CyberWarfare_MVC.Controllers
         }
 
         //Post
+        [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeletePost(int id)
