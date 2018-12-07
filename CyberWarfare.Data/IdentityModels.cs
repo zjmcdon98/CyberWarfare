@@ -34,6 +34,8 @@ namespace CyberWarfare.Data
 
         public DbSet<Attack> Attacks { get; set; }
 
+        public DbSet<Country> Countries { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
