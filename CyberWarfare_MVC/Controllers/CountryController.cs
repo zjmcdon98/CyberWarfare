@@ -10,11 +10,17 @@ namespace CyberWarfare_MVC.Controllers
     [Authorize]
     public class CountryController : Controller
     {
-        // GET: Country
+        // GET
         public ActionResult Index()
         {
             var model = new CountryListItem[0];
             return View(model);
+        }
+
+        // Get
+        public ActionResult Create()
+        {
+            return View();
         }
     }
 }

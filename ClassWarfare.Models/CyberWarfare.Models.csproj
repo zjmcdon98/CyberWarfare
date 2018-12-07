@@ -58,6 +58,7 @@
     <Compile Include="AttackDetail.cs" />
     <Compile Include="AttackEdit.cs" />
     <Compile Include="AttackListItem.cs" />
+    <Compile Include="CountryCreate.cs" />
     <Compile Include="CountryListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
