@@ -54,5 +54,25 @@ namespace CyberWarfare.Services
                 return query.ToArray();
             }
         }
+
+        public CountryDetail GetCountryById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Countries
+                        .Single(e => e.CountryId == countryId && e.OwnerTwoId == _userId);
+                return
+                    new CountryDetail
+                    {
+                        CountryId = entity.CountryId,
+                        CountryName = entity.CountryName,
+                        CountryTech = entity.CountryTech,
+                        DipRelations = entity.DipRelations,
+                        StaffAmount = entity.StaffAmount,
+                        CountryBudget = CountryBudget
+                    };​
+            }
+        }
     }
-}

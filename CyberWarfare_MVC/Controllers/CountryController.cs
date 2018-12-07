@@ -46,6 +46,15 @@ namespace CyberWarfare_MVC.Controllers
         }
 
         //Get
+        public ActionResult Details(int id)
+        {
+            var svc = CreateCountryService();
+            var model = svc.GetCountryById(id);
+​
+            return View(model);
+        }
+
+        //Get
         private CountryService CreateCountryService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
