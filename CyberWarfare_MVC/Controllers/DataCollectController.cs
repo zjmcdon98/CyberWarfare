@@ -1,51 +1,48 @@
-﻿using ClassWarfare.Models;
-using ClassWarfare.Services;
+﻿using CyberWarfare.Models;
 using CyberWarfare.Services;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.ApplicationServices;
 using System.Web.Mvc;
 
 namespace CyberWarfare_MVC.Controllers
 {
     [Authorize]
-    public class AttackController : Controller
+    public class DataCollectController : Controller
     {
         // GET
         public ActionResult Index()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new AttackService(userId);
-            var model = service.GetAttacks();
+            var service = CreateDataCollectService();
+            var model = service.GetDataCollection();
             return View(model);
         }
 
         //Get
         public ActionResult Create()
         {
-            var attackservice = CreateAttackService();
             return View();
         }
 
         //Post
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(AttackCreate model)
+        public ActionResult Create(DataCollectCreate model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            var service = CreateAttackService();
-            
-            if (service.CreateAttack(model))
+            var service = CreateDataCollectService();
+
+            if (service.CreateDataCollectItem(model))
             {
-                TempData["SaveResult"] = "Your note was created.";
+                TempData["SaveResult"] = "Your data was added.";
                 return RedirectToAction("Index");
             };
 
-            ModelState.AddModelError("", "Note could not be created.");
+            ModelState.AddModelError("", "This data could not be created.");
 
             return View(model);
         }
@@ -53,8 +50,8 @@ namespace CyberWarfare_MVC.Controllers
         //Get
         public ActionResult Details(int id)
         {
-            var svc = CreateAttackService();
-            var model = svc.GetAttackById(id);
+            var svc = CreateDataCollectService();
+            var model = svc.GetDataCollectById(id);
 
             return View(model);
         }
@@ -62,16 +59,19 @@ namespace CyberWarfare_MVC.Controllers
         //Get
         public ActionResult Edit(int id)
         {
-            var service = CreateAttackService();
-            var detail = service.GetAttackById(id);
+            var service = CreateDataCollectService();
+            var detail = service.GetDataCollectById(id);
             var model =
-                new AttackEdit
+                new DataCollectEdit
                 {
+                    DataCollectItemId = detail.DataCollectItemId,
                     AttackId = detail.AttackId,
+                    CountryId = detail.CountryId,
+                    AttackName = detail.AttackName,
+                    CountryName = detail.CountryName,
                     Success = detail.Success,
-                    Date = detail.Date,
-                    Time = detail.Time,
-                    AttackType = detail.AttackType
+                    AttackType = detail.AttackType,
+                    AttackingCountry = detail.AttackingCountry
                 };
             return View(model);
         }
@@ -79,33 +79,33 @@ namespace CyberWarfare_MVC.Controllers
         //Post
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, AttackEdit model)
+        public ActionResult Edit(int id, DataCollectEdit model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            if(model.AttackId != id)
+            if (model.DataCollectItemId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);
             }
 
-            var service = CreateAttackService();
+            var service = CreateDataCollectService();
 
-            if (service.UpdateAttack(model))
+            if (service.UpdateDataCollectItem(model))
             {
-                TempData["SaveResult"] = "Your note was updated.";
+                TempData["SaveResult"] = "Your data was updated.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Your note could not be updated.");
+            ModelState.AddModelError("", "Your data could not be updated.");
             return View(model);
         }
 
         //Get
         public ActionResult Delete(int id)
         {
-            var svc = CreateAttackService();
-            var model = svc.GetAttackById(id);
+            var svc = CreateDataCollectService();
+            var model = svc.DeleteDataCollectItem(id);
 
             return View(model);
         }
@@ -116,23 +116,21 @@ namespace CyberWarfare_MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeletePost(int id)
         {
-            var service = CreateAttackService();
+            var service = CreateDataCollectService();
 
-            service.DeleteAttack(id);
+            service.DeleteDataCollectItem(id);
 
-            TempData["SaveResult"] = "Your note was deleted.";
+            TempData["SaveResult"] = "Your data was deleted.";
 
             return RedirectToAction("Index");
         }
 
         //Get
-        public AttackService CreateAttackService()
+        public DataCollectService CreateDataCollectService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new AttackService(userId);
+            var service = new DataCollectService(userId);
             return service;
         }
     }
 }
-
-

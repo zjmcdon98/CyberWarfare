@@ -197,6 +197,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AttackController.cs" />
     <Compile Include="Controllers\CountryController.cs" />
+    <Compile Include="Controllers\DataCollectController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -275,6 +276,12 @@
     <Content Include="Views\Country\Create.cshtml" />
     <Content Include="Views\Country\Details.cshtml" />
     <Content Include="Views\Country\Edit.cshtml" />
+    <Content Include="Views\Country\Delete.cshtml" />
+    <Content Include="Views\DataCollect\Index.cshtml" />
+    <Content Include="Views\DataCollect\Create.cshtml" />
+    <Content Include="Views\DataCollect\Details.cshtml" />
+    <Content Include="Views\DataCollect\Edit.cshtml" />
+    <Content Include="Views\DataCollect\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -98,6 +98,29 @@ namespace CyberWarfare_MVC.Controllers
             return View(model);
         }
 
+        [ActionName ("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateCountryService();
+            var model = svc.GetCountryById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteCountry(int id)
+        {
+            var service = CreateCountryService();
+
+            service.DeleteCountry(id);
+
+            TempData["SaveResult"] = "The Country was deleted";
+
+            return RedirectToAction("Index");
+        }
+
         //Get
         private CountryService CreateCountryService()
         {

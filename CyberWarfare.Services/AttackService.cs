@@ -27,7 +27,8 @@ namespace ClassWarfare.Services
                     Success = model.Success,
                     Time = model.Time,
                     Date = model.Date,
-                    AttackType = model.AttackType
+                    AttackType = model.AttackType,
+                    AttackingCountry = model.AttackingCountry
                 };
 
             using (var ctx = new ApplicationDbContext())

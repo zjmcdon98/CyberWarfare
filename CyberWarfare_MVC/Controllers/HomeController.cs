@@ -15,14 +15,14 @@ namespace CyberWarfare_MVC.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "The Cyber Attack Database Web App is a project that is always evolving over time.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contact information for our main office.";
 
             return View();
         }

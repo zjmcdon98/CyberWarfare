@@ -1,0 +1,75 @@
+﻿@model IEnumerable<CyberWarfare.Models.DataCollectList>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DataCollectItemId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AttackId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AttackName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AttackType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Success)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AttackingCountry)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataCollectItemId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AttackId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AttackName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AttackType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Success)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AttackingCountry)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DataCollectItemId }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.DataCollectItemId }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.DataCollectItemId })
+        </td>
+    </tr>
+}
+
+</table>

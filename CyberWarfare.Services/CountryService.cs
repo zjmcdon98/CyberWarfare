@@ -22,7 +22,7 @@ namespace CyberWarfare.Services
             var entity =
                 new Country()
                 {
-                    OwnerTwoId = _userId,
+                    OwnerId = _userId,
                     CountryName = model.CountryName,
                     CountryTech = model.CountryTech,
                     DipRelations = model.DipRelations,
@@ -44,7 +44,7 @@ namespace CyberWarfare.Services
                 var query =
                     ctx
                         .Countries
-                        .Where(e => e.OwnerTwoId == _userId)
+                        .Where(e => e.OwnerId == _userId)
                         .Select(
                         e =>
                             new CountryListItem
@@ -64,7 +64,7 @@ namespace CyberWarfare.Services
                 var entity =
                     ctx
                         .Countries
-                        .Single(e => e.CountryId == countryid && e.OwnerTwoId == _userId);
+                        .Single(e => e.CountryId == countryid && e.OwnerId == _userId);
                 return
                     new CountryDetail
                     {
@@ -85,7 +85,7 @@ namespace CyberWarfare.Services
                 var entity =
                     ctx
                         .Countries
-                        .Single(e => e.CountryId == model.CountryId && e.OwnerTwoId == _userId);
+                        .Single(e => e.CountryId == model.CountryId && e.OwnerId == _userId);
 
                 entity.CountryName = model.CountryName;
                 entity.CountryTech = model.CountryTech;
@@ -97,5 +97,19 @@ namespace CyberWarfare.Services
             }
         }
 
+        public bool DeleteCountry(int countryId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Countries
+                        .Single(e => e.CountryId == countryId && e.OwnerId == _userId);
+
+                ctx.Countries.Remove(entity);
+                    
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

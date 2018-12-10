@@ -10,7 +10,10 @@ namespace ClassWarfare.Models
     {
         public int CountryId { get; set; }
         public string CountryName { get; set; }
-        
-        public override string ToString() => CountryName;   
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

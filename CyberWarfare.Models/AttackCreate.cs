@@ -22,6 +22,8 @@ namespace ClassWarfare.Models
 
         public string AttackType { get; set; }
 
+        public string AttackingCountry { get; set; }
+
         public override string ToString() => AttackName;
     }
 }

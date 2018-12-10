@@ -14,5 +14,6 @@ namespace ClassWarfare.Models
         public string Date { get; set; }
         public string Time { get; set; }
         public string AttackType { get; set; }
+        public string AttackingCountry { get; set; }
     }
 }

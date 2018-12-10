@@ -62,6 +62,10 @@
     <Compile Include="CountryDetail.cs" />
     <Compile Include="CountryEdit.cs" />
     <Compile Include="CountryListItem.cs" />
+    <Compile Include="DataCollectCreate.cs" />
+    <Compile Include="DataCollectDetail.cs" />
+    <Compile Include="DataCollectEdit.cs" />
+    <Compile Include="DataCollectList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -10,7 +10,6 @@ namespace CyberWarfare.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "CyberWarfare.Data.ApplicationDbContext";
         }
 
         protected override void Seed(CyberWarfare.Data.ApplicationDbContext context)
