@@ -4,85 +4,92 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<div class="aboutheader">
+    <div class="abouttitle">
+        <h2>Delete</h2>
+    </div>
+    <h3>Are you sure you want to delete this?</h3>
+</div>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>DataCollectDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.DataCollectItemId)
-        </dt>
+<div class="aboutmain">
+    <div>
+        <h4>DataCollectDetail</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.DataCollectItemId)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.DataCollectItemId)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.DataCollectItemId)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AttackId)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.AttackId)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.AttackId)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.AttackId)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CountryId)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.CountryId)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CountryId)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.CountryId)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AttackName)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.AttackName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.AttackName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.AttackName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CountryName)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.CountryName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CountryName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.CountryName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AttackType)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.AttackType)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.AttackType)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.AttackType)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Success)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Success)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Success)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Success)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AttackingCountry)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.AttackingCountry)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.AttackingCountry)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.AttackingCountry)
+            </dd>
 
-    </dl>
+        </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
 </div>
