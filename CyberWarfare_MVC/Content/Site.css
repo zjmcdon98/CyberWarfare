@@ -1,4 +1,5 @@
 ﻿body {
+    background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -22,3 +23,92 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.jumbotron {
+    background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') no-repeat center;
+    background-size: cover;
+    color: darkgray;
+}
+
+.row {
+    background-color: black;
+    Color: darkgrey;
+}
+
+.btn {
+    background-color: rgb(128,128,128);
+    Color: black;  
+    position: relative;
+    
+}
+
+.datetimehome{
+    color: grey;
+}
+
+.navbar{
+    background-color: black;
+    color: darkgrey;
+}
+
+.tableindexheader {
+    background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') no-repeat center;
+    background-size: cover;
+    border: 5px solid rgba(128,128,128,.9);
+    color: darkgrey;
+    margin: 5px, 5px, 5px, 5px
+}
+
+.table{
+    background-color: rgba(128,128,128,.9);
+    margin: 5px, 5px, 5px, 5px;
+    padding: 4px, 4px, 4px, 4px;
+    background-size: cover;
+}
+
+.tabletitle{
+    text-align: center;
+}
+
+.aboutheader {
+    background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') no-repeat center;
+    background-size: cover;
+    border: 5px solid rgba(128,128,128,.9);
+    color: darkgrey;
+    margin: 5px, 5px, 5px, 5px
+}
+
+.aboutmain {
+    background-color: rgba(128,128,128,.9);
+    margin: 5px, 5px, 5px, 5px;
+    padding: 4px, 4px, 4px, 4px;
+    background-size: cover;
+}
+
+.abouttitle{
+    text-align: center;
+}
+
+.email {
+    color: darkgray;
+}
+
+/* unvisited link */
+a:link {
+    color: black;
+}
+/* visited link */
+a:visited   {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+/* selected link */
+a:active {
+    color: Black;
+}
+

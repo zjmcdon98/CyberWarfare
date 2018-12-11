@@ -4,13 +4,20 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="tableindexheader">
+    <div class="tabletitle">
+        <h2>Add an Attack</h2>
+    </div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+    <div class="tableindexcreate">
+        <p>
+            @Html.ActionLink("Create New", "Create", null, new { style = "color: rgb(128,128,128)" })
+        </p>
+    </div>
+</div>
 
-@if(TempData.ContainsKey("SaveResult"))
+
+@if (TempData.ContainsKey("SaveResult"))
 {
     <div class="alert alert-success fade in" role="alert">
         @ViewBag.SaveResult
@@ -20,6 +27,7 @@
         @TempData["SaveResult"]
     </div>
 }
+
 <table class="table">
     <tr>
         <th>
@@ -41,9 +49,9 @@
                 @Html.DisplayFor(modelItem => item.AttackName)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.AttackId }) |
-                @Html.ActionLink("Details", "Details", new { id=item.AttackId }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.AttackId })
+                @Html.ActionLink("Edit", "Edit", new { id = item.AttackId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.AttackId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.AttackId })
             </td>
         </tr>
     }

@@ -1,16 +1,24 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    11727 Langham Crecsent Ct.<br />
-    Fishers, IN 46037<br />
-    <abbr title="Phone">P:</abbr>
-    317.578.0812
-</address>
+<div class="aboutheader">
+    <div class="abouttitle">
+        <h2>@ViewBag.Title</h2>
+    </div>
+    <h3>@ViewBag.Message</h3>
+</div>
 
-<address>
-    <strong>Work:</strong>   <a href="mailto:zjmcdon98@gmail.com">zjmcdon98@gmail.com</a><br />
-</address>
+<div class="aboutmain">
+    <address>
+        11727 Langham Crecsent Ct.<br />
+        Fishers, IN 46037<br />
+        <abbr title="Phone">P:</abbr>
+        317.578.0812
+    </address>
+    <div class="email">
+        <address>
+            <strong>Work:</strong>   <a href="mailto:zjmcdon98@gmail.com">zjmcdon98@gmail.com</a><br />
+        </address>
+    </div>
+</div>
