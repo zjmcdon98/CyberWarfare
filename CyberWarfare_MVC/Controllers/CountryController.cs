@@ -37,11 +37,11 @@ namespace CyberWarfare_MVC.Controllers
 
             if (service.CreateCountry(model))
             {
-                TempData["SaveResult"] = "Your note was created.";
+                TempData["SaveResult"] = "Your Country was Added.";
                 return RedirectToAction("Index");
             };
 
-            ModelState.AddModelError("", "Note could not be created.");
+            ModelState.AddModelError("", "Country could not be Added.");
 
             return View(model);
         }

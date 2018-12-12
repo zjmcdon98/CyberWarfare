@@ -4,69 +4,77 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<div class="aboutheader">
+    <div class="abouttitle">
+        <h2>Delete Country</h2>
+    </div>
+    <h3>Are you sure you want to delete this?</h3>
+</div>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>CountryDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CountryId)
-        </dt>
+<div class="aboutmain">
 
-        <dd>
-            @Html.DisplayFor(model => model.CountryId)
-        </dd>
+    <div>
+        <h4>CountryDetail</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.CountryId)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CountryName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.CountryId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.CountryName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CountryName)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CountryTech)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.CountryName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.CountryTech)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CountryTech)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DipRelations)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.CountryTech)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.DipRelations)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DipRelations)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.StaffAmount)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DipRelations)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.StaffAmount)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.StaffAmount)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CountryBudget)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.StaffAmount)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.CountryBudget)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CountryBudget)
+            </dt>
 
-    </dl>
+            <dd>
+                @Html.DisplayFor(model => model.CountryBudget)
+            </dd>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+        </dl>
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
 </div>

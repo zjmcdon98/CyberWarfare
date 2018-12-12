@@ -41,11 +41,11 @@ namespace CyberWarfare_MVC.Controllers
             
             if (service.CreateAttack(model))
             {
-                TempData["SaveResult"] = "Your note was created.";
+                TempData["SaveResult"] = "Your Attack was added.";
                 return RedirectToAction("Index");
             };
 
-            ModelState.AddModelError("", "Note could not be created.");
+            ModelState.AddModelError("", "Attack could not be added.");
 
             return View(model);
         }
@@ -93,11 +93,11 @@ namespace CyberWarfare_MVC.Controllers
 
             if (service.UpdateAttack(model))
             {
-                TempData["SaveResult"] = "Your note was updated.";
+                TempData["SaveResult"] = "Attack was updated.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Your note could not be updated.");
+            ModelState.AddModelError("", "Attack could not be updated.");
             return View(model);
         }
 
@@ -120,7 +120,7 @@ namespace CyberWarfare_MVC.Controllers
 
             service.DeleteAttack(id);
 
-            TempData["SaveResult"] = "Your note was deleted.";
+            TempData["SaveResult"] = "Attack was deleted.";
 
             return RedirectToAction("Index");
         }

@@ -15,7 +15,6 @@ namespace CyberWarfare_MVC.Controllers
         // GET
         public ActionResult Index()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
             var service = CreateDataCollectService();
             var model = service.GetDataCollection();
             return View(model);
@@ -105,7 +104,7 @@ namespace CyberWarfare_MVC.Controllers
         public ActionResult Delete(int id)
         {
             var svc = CreateDataCollectService();
-            var model = svc.DeleteDataCollectItem(id);
+            var model = svc.GetDataCollectById(id);
 
             return View(model);
         }
