@@ -41,7 +41,7 @@ namespace CyberWarfare_MVC.Controllers
             
             if (service.CreateAttack(model))
             {
-                TempData["SaveResult"] = "Your Attack was added.";
+                TempData["AttackSaveResult"] = "Your Attack was added.";
                 return RedirectToAction("Index");
             };
 
@@ -93,7 +93,7 @@ namespace CyberWarfare_MVC.Controllers
 
             if (service.UpdateAttack(model))
             {
-                TempData["SaveResult"] = "Attack was updated.";
+                TempData["AttackSaveResult"] = "Attack was updated.";
                 return RedirectToAction("Index");
             }
 
@@ -120,7 +120,7 @@ namespace CyberWarfare_MVC.Controllers
 
             service.DeleteAttack(id);
 
-            TempData["SaveResult"] = "Attack was deleted.";
+            TempData["AttackSaveResult"] = "Attack was deleted.";
 
             return RedirectToAction("Index");
         }

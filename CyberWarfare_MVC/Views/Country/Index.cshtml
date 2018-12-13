@@ -1,7 +1,9 @@
 ﻿@model IEnumerable<ClassWarfare.Models.CountryListItem>
 
 @{
-    ViewBag.Title = "Index";
+                /**/
+
+                ViewBag.Title = "Index";
 }
 <div class="tableindexheader">
     <div class="tabletitle">
@@ -15,7 +17,7 @@
     </div>
 </div>
 
-@if (TempData.ContainsKey("SaveResult"))
+@if (TempData.ContainsKey("CountrySaveMessage"))
 {
     <div class="alert alert-success fade in" role="alert">
         @ViewBag.SaveResult
@@ -24,6 +26,7 @@
             <span>&times;</span>
         </button>
         @TempData["SaveResult"]
+        @TempData["CountrySaveMessage"]
     </div>
 }
 
@@ -34,6 +37,18 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CountryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryTech)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DipRelations)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StaffAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryBudget)
         </th>
         <th></th>
     </tr>
@@ -46,6 +61,18 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CountryName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.CountryTech)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.DipRelations)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.StaffAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.CountryBudget)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.CountryId }) |

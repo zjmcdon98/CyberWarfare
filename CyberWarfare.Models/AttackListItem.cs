@@ -10,6 +10,11 @@ namespace ClassWarfare.Models
     {
         public int AttackId { get; set; }
         public string AttackName { get; set; }
+        public string Success { get; set; }
+        public string Time { get; set; }
+        public string Date { get; set; }
+        public string AttackType { get; set; }
+        public string AttackingCountry { get; set; }
 
         public override string ToString()
         {

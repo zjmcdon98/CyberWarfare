@@ -10,6 +10,11 @@ namespace ClassWarfare.Models
     {
         public int CountryId { get; set; }
         public string CountryName { get; set; }
+        public string CountryTech { get; set; }
+        public string DipRelations { get; set; }
+        public int StaffAmount { get; set; }
+        public int CountryBudget { get; set; }
+
 
         public override string ToString()
         {

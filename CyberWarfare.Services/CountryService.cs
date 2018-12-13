@@ -50,7 +50,12 @@ namespace CyberWarfare.Services
                             new CountryListItem
                             {
                                 CountryId = e.CountryId,
-                                CountryName = e.CountryName
+                                CountryName = e.CountryName,
+                                CountryTech = e.CountryTech,
+                                DipRelations = e.DipRelations,
+                                StaffAmount = e.StaffAmount,
+                                CountryBudget = e.CountryBudget
+
                             }
                         );
                 return query.ToArray();

@@ -54,7 +54,8 @@ namespace ClassWarfare.Services
                       Success = entity.Success,
                       Date = entity.Date,
                       Time = entity.Time,
-                      AttackType = entity.AttackType
+                      AttackType = entity.AttackType,
+                      AttackingCountry = entity.AttackingCountry
                   };
             }
         }
@@ -72,6 +73,7 @@ namespace ClassWarfare.Services
                 entity.Date = model.Date;
                 entity.Time = model.Time;
                 entity.AttackType = model.AttackType;
+                entity.AttackingCountry = model.AttackingCountry;
 
                 return ctx.SaveChanges() == 1;
             }
@@ -105,7 +107,12 @@ namespace ClassWarfare.Services
                             new AttackListItem
                             {
                                 AttackId = e.AttackId,
-                                AttackName = e.AttackName
+                                AttackName = e.AttackName,
+                                Success = e.Success,
+                                Time = e.Time,
+                                Date = e.Date,
+                                AttackType = e.AttackType,
+                                AttackingCountry = e.AttackingCountry
                             }
                         );
                 return query.ToArray();
