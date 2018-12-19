@@ -44,9 +44,9 @@ namespace Cyberwarfare.WebAPI.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-​
+
             var service = CreateAttackService();
-​
+
             if (!service.UpdateAttack(attack))
                 return InternalServerError();
 
@@ -56,7 +56,7 @@ namespace Cyberwarfare.WebAPI.Controllers
         public IHttpActionResult Delete(int id)
         {
             var service = CreateAttackService();
-​
+
             if (!service.DeleteAttack(id))
                 return InternalServerError();
 
