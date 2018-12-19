@@ -233,6 +233,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AttackController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -240,7 +241,6 @@
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -336,6 +336,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CyberWarfare.Data\CyberWarfare.Data.csproj">
+      <Project>{5007c3b1-7cd8-4ad3-8355-74bff2da28d3}</Project>
+      <Name>CyberWarfare.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CyberWarfare.Models\ClassWarfare.Models.csproj">
+      <Project>{c2098113-d5dc-4ead-a03c-32974f06c088}</Project>
+      <Name>ClassWarfare.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CyberWarfare.Services\CyberWarfare.Services.csproj">
+      <Project>{6ec380a7-cac2-4f4a-aa7f-55db74b3c5b3}</Project>
+      <Name>CyberWarfare.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -10,6 +10,7 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using Cyberwarfare.WebAPI.Models;
+using CyberWarfare.Data;
 
 namespace Cyberwarfare.WebAPI.Providers
 {

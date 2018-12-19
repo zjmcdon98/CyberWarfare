@@ -16,6 +16,7 @@ using Microsoft.Owin.Security.OAuth;
 using Cyberwarfare.WebAPI.Models;
 using Cyberwarfare.WebAPI.Providers;
 using Cyberwarfare.WebAPI.Results;
+using CyberWarfare.Data;
 
 namespace Cyberwarfare.WebAPI.Controllers
 {
